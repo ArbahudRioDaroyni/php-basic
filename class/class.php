@@ -6,11 +6,11 @@ class Human
     var $name, $birthday, $age, $gender, $hobby;
 
     // Declare method.
-    function SetName($name)
+    function setName($name)
     {
         $this->name = $name;
     }
-    function GetName()
+    function getName()
     {
         return $this->name;
     }
@@ -18,8 +18,8 @@ class Human
 // Initial class human
 $model = new Human();
 // Set name class human
-$model->SetName('Peter Jack');
+$model->setName('Peter Jack');
 // get name class human
 // or can bypass access variable with :
 // echo $model->name;
-echo $model->GetName(); ?>
+echo $model->getName(); ?>
