@@ -5,7 +5,7 @@ class Human
     // Declare property.
     var $name, $birthday, $age, $gender, $hobby;
 
-    // Declare function.
+    // Declare method.
     function SetName($name)
     {
         $this->name = $name;

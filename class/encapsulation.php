@@ -1,17 +1,16 @@
 <?php
-// Declare for human class.
-class Car
-{
 // public access, every code out of class can access it property.
 // protected access, only self class or inheritance class can access it property.
 // private access, only self class class can access it property.
-
+// Declare for human class.
+class Car
+{
     // Declare property.
     public $name, $series, $age;
     protected $production, $color;
     private $license;
 
-    // Declare function.
+    // Declare method.
     public function SetName($name)
     {
         $this->name = $name;
@@ -23,6 +22,16 @@ class Car
     private function SetLicense($license)
     {
         $this->license = $license;
+    }
+
+    // this method is to access private access inner class
+    public function ForceSetLicense($license)
+    {
+        return self::SetLicense($license);
+    }
+    public function ForceGetLicense()
+    {
+        return $this->license;
     }
 }
 
@@ -40,13 +49,16 @@ class Ferrari extends Car
     }
 }
 
+//Access public can be access from other code
 $publicModel = new Car();
-
 $publicModel->SetName('ferrari f12');
 echo $publicModel->name;
 
-$protectedModel = new Ferrari();
+$publicModel->ForceSetLicense('jgvata76a87nay79yas7ays');
+echo $publicModel->ForceGetLicense();
 
+//initial class ferrari
+$protectedModel = new Ferrari();
 $protectedModel->SetColor('Red');
 echo $protectedModel->GetColor();
 
