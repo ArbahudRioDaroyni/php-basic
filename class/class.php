@@ -15,9 +15,11 @@ class Human
         return $this->name;
     }
 }
-// Initial variable for human class.
-$jack = new Human();
-// Set name variable with SetName function on class Human.
-$jack->SetName('Peter Jack');
-// get name variable with GetName function on class Human and print it.
-$jack->GetName(); ?>
+// Initial class human
+$model = new Human();
+// Set name class human
+$model->SetName('Peter Jack');
+// get name class human
+// or can bypass access variable with :
+// echo $model->name;
+echo $model->GetName(); ?>
