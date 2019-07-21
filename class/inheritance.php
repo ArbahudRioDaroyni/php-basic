@@ -5,7 +5,7 @@ class Vehicle
 {
     public $fuel;
 
-    public function SetFuel($fuel)
+    public function setFuel($fuel)
     {
         $this->fuel = $fuel;
     }
@@ -17,7 +17,7 @@ class VehicleType extends Vehicle
 {
     public $type;
 
-    public function SetType($type)
+    public function setType($type)
     {
         $this->type = $type;
     }
@@ -29,7 +29,7 @@ class VehicleSeries extends VehicleType
 {
     public $series;
 
-    public function SetSeries($series)
+    public function setSeries($series)
     {
         $this->series = $series;
     }
@@ -41,11 +41,11 @@ class Car extends VehicleSeries
 {
     public $numberPlate;
 
-    public function SetNumberPlate($numberPlate)
+    public function setNumberPlate($numberPlate)
     {
         $this->numberPlate = $numberPlate;
     }
-    public function GetAllData()
+    public function getAllData()
     {
         return [
             'fuel' => $this->fuel,
@@ -59,9 +59,9 @@ class Car extends VehicleSeries
 // initial object
 $car =  new car();
 // set all data
-$car->SetFuel('Pertalite');
-$car->SetType('Kijang');
-$car->SetSeries('Innova Reborn');
-$car->SetNumberPlate('L 1477 KK');
-var_dump($car->GetAllData());
+$car->setFuel('Pertalite');
+$car->setType('Kijang');
+$car->setSeries('Innova Reborn');
+$car->setNumberPlate('L 1477 KK');
+var_dump($car->getAllData());
 ?>

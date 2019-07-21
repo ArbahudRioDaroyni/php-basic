@@ -11,25 +11,25 @@ class Car
     private $license;
 
     // Declare method.
-    public function SetName($name)
+    public function setName($name)
     {
         $this->name = $name;
     }
-    protected function SetColor($color)
+    protected function setColor($color)
     {
         $this->color = $color;
     }
-    private function SetLicense($license)
+    private function setLicense($license)
     {
         $this->license = $license;
     }
 
     // this method is to access private access inner class
-    public function ForceSetLicense($license)
+    public function forceSetLicense($license)
     {
-        return self::SetLicense($license);
+        return self::setLicense($license);
     }
-    public function ForceGetLicense()
+    public function forceGetLicense()
     {
         return $this->license;
     }
@@ -39,11 +39,11 @@ class Car
 // protected can access here as inheritance class
 class Ferrari extends Car
 {
-    public function SetColor($color)
+    public function setColor($color)
     {
         $this->color = $color;
     }
-    public function GetColor()
+    public function getColor()
     {
         return $this->color;
     }
@@ -51,15 +51,15 @@ class Ferrari extends Car
 
 //Access public can be access from other code
 $publicModel = new Car();
-$publicModel->SetName('ferrari f12');
+$publicModel->setName('ferrari f12');
 echo $publicModel->name;
 
-$publicModel->ForceSetLicense('jgvata76a87nay79yas7ays');
-echo $publicModel->ForceGetLicense();
+$publicModel->forceSetLicense('jgvata76a87nay79yas7ays');
+echo $publicModel->forceGetLicense();
 
 //initial class ferrari
 $protectedModel = new Ferrari();
-$protectedModel->SetColor('Red');
-echo $protectedModel->GetColor();
+$protectedModel->setColor('Red');
+echo $protectedModel->getColor();
 
 ?>

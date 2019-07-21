@@ -13,7 +13,7 @@ class Woman extends Human
     {
         $this->gender = "woman";
     }
-    public function GetGender()
+    public function getGender()
     {
         return $this->gender;
     }
